@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+
+    font-family: 'Poppins', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    outline: none; 
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+/*--------------------------------------Buttons--------------------------------------------*/
+.btn{
+   display: inline-block;
+   margin-top: 1rem;
+   padding:.8rem 3rem;
+   background: #79f84e;
+   box-shadow: inset 5px 5px 10px #160153,
+            inset -5px -5px 10px #00fff2;
+   color:#070049;
+   cursor: pointer;
+   font-size: 1.7rem;
+   border-radius: .5rem;
+   font-weight: 500;
+   text-align: center;
+}
+
+.btn:hover{
+   background:#ffffff;
+}
+ /*==============================Header Section===================================================*/
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    margin: 1px;
+    top:0; left:0; right:0;
+    padding:3rem 9%;
+    z-index: 1000;
+    border-radius: 10px;
+   background: #ffffff;
+   box-shadow: inset 5px 5px 10px #00af9a,
+            inset -5px -5px 10px #00fff2;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color:rgb(1, 71, 7);
+    font-weight: bold;
+}
+
+.header .logo span{
+    color:rgb(12, 0, 93);
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    color: rgb(0, 0, 76);
+}
+
+.header .navbar a:hover{
+    color:rgba(0, 187, 255, 0.685);
+}
+
+.header.active{
+    padding:2rem 9%;
+    box-shadow: #121;
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    color: #ff0000;;
+    display: none;
+}
+
+/*==============================================Heading for each Section========================================*/
+.heading{
+   padding-bottom: 2rem;
+   text-align: center;
+   font-size: 3.5rem;
+   color:rgb(11, 1, 68);
+}
+
+.heading span{
+   position: relative;
+   z-index: 0;
+}
+
+.heading span::before{
+   content: '';
+   position: absolute;
+   bottom:1rem; left:0;
+   height: 100%;
+   width: 100%;
+   background: rgb(176, 176, 176);
+   z-index: -1;
+   clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
+}
+
+/*=-=-=-=-=-=========================================================--------Home Section-------=============================*/
+
+.home{
+    padding-top: 10rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.home h3{
+    color: rgb(2, 0, 68);
+    font-size: 3.5vw;
+}
+
+.home img{
+    width:100%;
+    margin:0.5rem 0;
+}
+
+/*==============================================Dash Board============================================*/
+.dashboard{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 50px;
+    padding-top: 5rem;
+    margin: 2px;
+    border-radius: 5px;
+    padding-bottom: 5rem;
+    background: rgb(255, 255, 255);
+    box-shadow: inset 5px 5px 10px #00af9a,
+            inset -5px -5px 10px #59ff00;
+}
+
+.dashboard .icons{
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #5ecd7a, #f953ffc4);
+    box-shadow:  7px 7px 14px #ffffff,
+             -7px -7px 14px #ffffff;
+    padding:5rem;
+    gap:5px;
+}
+
+.dashboard .icons i{
+    height:5rem;
+    width:5rem;
+    line-height:5rem;
+    font-size:2.5rem;
+    color: rgb(11, 0, 65);
+    background:rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.dashboard .icons .content h3{
+    font-size: 2.5rem;
+    color:#121;
+    font-weight: bold;
+}
+
+.dashboard .icons .content p{
+    font-size: 1.5rem;
+    color:#044900;
+}
+
+.dashboard .icons:hover{
+    background: #165ffd;
+}
+
+.dashboard .icons:hover i{
+    background: navajowhite;
+}
+
+.dashboard .icons:hover .content h3{
+    color:rgba(195, 90, 255, 0.808);
+}
+
+.dashboard .icons:hover .content p{
+    color:rgb(255, 175, 101);
+}
+
+/*===============================Cars and Bikes section=================================*/
+
+.vehicles{
+    margin: 2px;
+    margin-top: 30px;
+    padding-bottom: 5rem;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: inset 5px 5px 10px #00af9a,
+            inset -5px -5px 10px #26ff00;
+
+}
+
+.vehicles .new_cars {
+   width: 98%;
+   height: auto;
+   margin: auto;
+   margin-top: 15px;
+}
+
+
+.vehicles .new_cars .cars_list {
+   width: 100%;
+   height: 500px;
+   margin-top: 15px;
+   display: flex;
+   overflow-x: auto;
+   scroll-behavior: smooth;
+}
+.vehicles .new_cars .cars_list::-webkit-scrollbar{
+   display: none;
+}
+.vehicles .new_cars .cars_list li{
+   min-width: 40%;
+   height: 500px;
+   list-style-type: none;
+   margin: 5px;
+   box-shadow: 7px 7px 14px #f5e2e2,
+   -7px -7px 14px #ffffff;
+   transition: .3s linear;
+}
+.vehicles .new_cars .cars_list li:hover{
+   background: rgba(111, 111, 255, 0.497);
+}
+.vehicles .new_cars .cars_list li .img_play{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vehicles .new_cars .cars_list li .img_play img{
+ width: 100%;
+ height: 400px;
+}
+
+.vehicles .new_cars .cars_list li h5{
+ padding: 5px 0px 0px 5px;
+ line-height: 20px;
+ color: #070049;
+ font-size: 20px;
+ font-weight: bolder;
+}
+.vehicles .new_cars .cars_list li h5 .subtitle{
+ font-size: 15px;
+ margin: 5px;
+ padding: 2px;
+ color: #023721;
+}
+
+
+
+.swiper-pagination-bullet-active{
+    background: #bafeef;
+}
+
+
+/*-----------------------------------------Services Section---------------------------------------------*/
+.services{
+   margin: 2px;
+   margin-top: 30px;
+   padding-bottom: 5rem;
+   background: rgb(255, 255, 255);
+   border-radius: 5px;
+   box-shadow: inset 5px 5px 10px #00af9a,
+           inset -5px -5px 10px #2bff00;   
+}
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+
+    
+}
+
+.services .box-container .box{
+    padding:2rem;
+    border-radius: 3px;
+    background: linear-gradient(225deg, #ffdbdb, #a3ffbb);
+    box-shadow:  -5px 5px 10px #eaf8ae,
+                 5px -5px 10px #ffffff;;
+    border:#121;
+    text-align: center;
+}
+
+.services .box-container .box i{
+    height:6rem;
+    width:6rem;
+    line-height: 6rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background:#ffffff;
+    color:rgb(0, 91, 0);
+}
+
+.services .box-container .box h3{
+    font-size: 2.2rem;
+    color:#121;
+}
+
+.services .box-container .box p{
+    line-height: 1.8;
+    padding:1rem 0;
+    font-size: 1.4rem;
+    color:#122;
+}
+
+.services .box-container .box:hover{
+    background: #070049ab;
+}
+
+.services .box-container .box:hover h3{
+    color:#fff;
+}
+
+.services .box-container .box:hover p{
+    color:#eee;
+}
+
+/*---------------------------------------------About Us------------------------------------------*/
+
+.About_Us{
+   margin: 2px;
+   margin-top: 30px;
+   padding-bottom: 5rem;
+   background: rgb(250, 250, 250);
+   border-radius: 5px;
+   box-shadow: inset 5px 5px 10px #00af9a,
+           inset -5px -5px 10px #15ff00; 
+}
+
+.About_Us h3{
+   text-align: center;
+    font-size: 3rem;
+    color:#070049;
+}
+
+.About_Us p{
+    font-size: 1.5rem;
+    color:#000000;
+    text-align: justify;
+    padding:1rem 0;
+}
+
+/*----------------------------------------------------Contact Us Section-----------------------------------------------------*/
+.contact{
+   margin: 2px;
+   margin-top: 30px;
+   padding-bottom: 5rem;
+   background: rgb(255, 255, 255);
+   border-radius: 5px;
+   box-shadow: inset 5px 5px 10px #00af9a,
+           inset -5px -5px 10px #0dff00; 
+
+
+}
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.contact .row form{
+    padding:2rem;
+    flex:1 1 42rem;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #fdd5d5, #cacaca);
+    box-shadow:  5px 5px 5px #9d9d9d,
+                 -5px -5px 5px #ffffff;
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.contact .row form h3{
+    font-size: 3rem;
+    color:#070049;
+    padding-bottom: 1rem;
+}
+
+.contact .row form .box{
+    width:100%;
+    border-radius: .5rem;
+    padding:1rem 1.2rem;
+    font-size: 1.6rem;
+    text-transform: none;
+    margin:.7rem 0;
+}
+
+.contact .row form textarea{
+    height:15rem;
+    resize: none;
+}
+
+
+/*------------------------------------------Footer Section-------------------------------------------------------*/
+
+.footer{
+   margin: 2px;
+   margin-top: 30px;
+   margin-bottom: 10px;
+   padding-bottom: 5rem;
+   background: rgb(224, 241, 249);
+   border-radius: 5px;
+   box-shadow: inset 5px 5px 10px #00af9a,
+           inset -5px -5px 10px #00fff2; 
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+
+    padding:1rem 0;
+    color:#070049
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.4rem;
+    padding:1rem 0;
+    color:#121;
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:#08005a;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+
+    .header.active{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: block;
+    }
+
+    #menu-btn.fa-times{
+        transform:rotate(180deg);
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:99%; left:0; right:0;
+        background: #fff;
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .navbar a{
+        margin:2rem;
+        display: block;
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+}
